@@ -1,4 +1,5 @@
 from sys import exception
+import sys
 import tkinter
 import password
 from string import ascii_lowercase, ascii_uppercase, digits, punctuation
@@ -80,6 +81,7 @@ class App(CTk.CTk):
         try:
             self.entry_password.insert(0, password.create_new_password(lenght=int(self.password_lenght_slider.get()),
                                                                    characters=self.get_chracters()))
+
         except:
             print(exception())
             pass
